@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://youyou475.github.io</id>
     <title>youyou475｜Blog</title>
-    <updated>2021-02-05T10:46:20.131Z</updated>
+    <updated>2021-02-05T10:57:40.665Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://youyou475.github.io"/>
     <link rel="self" href="https://youyou475.github.io/atom.xml"/>
@@ -10,4 +10,13 @@
     <logo>https://youyou475.github.io/images/avatar.png</logo>
     <icon>https://youyou475.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, youyou475｜Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[初见｜youyou475博客上线记]]></title>
+        <id>https://youyou475.github.io/post/chu-jian-oryouyou475-bo-ke-shang-xian-ji/</id>
+        <link href="https://youyou475.github.io/post/chu-jian-oryouyou475-bo-ke-shang-xian-ji/">
+        </link>
+        <updated>2021-02-05T10:47:24.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://youyou475.github.io/post-images/1612522602060.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
 </feed>
