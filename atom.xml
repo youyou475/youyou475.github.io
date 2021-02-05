@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://youyou475.github.io</id>
     <title>youyou475｜Blog</title>
-    <updated>2021-02-05T11:05:40.762Z</updated>
+    <updated>2021-02-05T11:11:31.205Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://youyou475.github.io"/>
     <link rel="self" href="https://youyou475.github.io/atom.xml"/>
@@ -12,12 +12,21 @@
     <rights>All rights reserved 2021, youyou475｜Blog</rights>
     <entry>
         <title type="html"><![CDATA[初见｜youyou475博客上线记]]></title>
-        <id>https://youyou475.github.io/post/chu-jian-oryouyou475-bo-ke-shang-xian-ji/</id>
-        <link href="https://youyou475.github.io/post/chu-jian-oryouyou475-bo-ke-shang-xian-ji/">
+        <id>https://youyou475.github.io/post/first-meet/</id>
+        <link href="https://youyou475.github.io/post/first-meet/">
         </link>
-        <updated>2021-02-05T10:47:24.000Z</updated>
+        <updated>2021-02-05T11:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>2021年2月5日，周五，南方小年。<br>
+看似平平无奇的一天里，却藏着一个大大的「梦想」。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>2021年2月5日，周五，南方小年。<br>
 看似平平无奇的一天里，却藏着一个大大的「梦想」。</p>
+<!-- more -->
+<p><strong>这一天，youyou475博客正式上线啦！</strong></p>
+<!-- more -->
+<p>这里，会分享许多「有趣」的东西。<br>
+例如，美食、摄影、技术 And So On....<br>
+敬请期待吧~</p>
 ]]></content>
     </entry>
 </feed>
