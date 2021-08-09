@@ -3,7 +3,7 @@
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>技术 | youyou475博客</title>
-<link rel="shortcut icon" href="https://youyou475.github.io/favicon.ico?v=1628521200985">
+<link rel="shortcut icon" href="https://youyou475.github.io/favicon.ico?v=1628525390150">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://youyou475.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="技术 | youyou475博客 - Atom Feed" href="https://youyou475.github.io/atom.xml">
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://youyou475.github.io">
-  <img class="avatar" src="https://youyou475.github.io/images/avatar.png?v=1628521200985" alt="">
+  <img class="avatar" src="https://youyou475.github.io/images/avatar.png?v=1628525390150" alt="">
   </a>
   <h1 class="site-title">
     youyou475博客
@@ -101,67 +101,7 @@
         </a>
       
       <div class="post-abstract">
-        <h1 id="一-探究背景">一、探究背景</h1>
-<blockquote>
-<p>ClassIn是翼鸥教育发布的一款功能强大的在线教室直播系统，凭借先进的多路视频通信技术，以及完善的全球布点建设云通信系统，ClassIn一直致力于在线教育技术的快发展。</p>
-</blockquote>
-<p>在实际使用过程中，发现ClassIn历史课程回放仅支持「在线播放」，而没有「下载」功能，仅可在授课老师分享课程后方可获取下载链接。<br>
-这给学生「分享课程」等操作造成了极大困难。<br>
-因此，尝试通过其它手段获取回放直链，就显得尤为重要，而「抓包」思想是我首先想到的方法。</p>
-<h1 id="二-准备工具">二、准备工具</h1>
-<ul>
-<li>一部Android手机（必须使用<strong>Android 11以下</strong>的设备，否则会有证书安装问题）</li>
-<li>一个ClassIn账号以及一个有效的课程</li>
-<li>如可以，建议给手机开启ROOT权限</li>
-</ul>
-<h1 id="三-方法讲解">三、方法讲解</h1>
-<h2 id="1安装软件">1.安装软件</h2>
-<h3 id="1classin-app">[1]ClassIn App</h3>
-<p><img src="https://youyou475.github.io/post-images/1628519698128.png" alt="" loading="lazy"><br>
-ClassIn官方提供下载渠道，可以直接在<a href="https://www.eeo.cn/cn/download.html">下载窗口</a>下载安装。</p>
-<h3 id="2httpcanary-app">[2]HttpCanary App</h3>
-<p><img src="https://youyou475.github.io/post-images/1628519884554.jpg" alt="" loading="lazy"><br>
-由于在各大应用市场均未搜到本应用，同时原作者也已经停止了日常维护，这里提供酷安大佬“NEKOOKEN”分享的<a href="https://url.ctfile.com/f/17101289-503900686-2ca6e2">下载链接</a>（访问密码：3513）。</p>
-<h2 id="2软件初步调试">2.软件初步调试</h2>
-<h3 id="1classin-app-2">[1]ClassIn App</h3>
-<p><img src="https://youyou475.github.io/post-images/1628520061601.jpg" alt="" loading="lazy"><br>
-将已有的ClassIn账号输入登录，进入「首页」界面，点击上方的「课程表」按钮，查看需要获取回放直链的课程。<br>
-<img src="https://youyou475.github.io/post-images/1628520086434.jpg" alt="" loading="lazy"></p>
-<h3 id="2httpcanary-app-2">[2]HttpCanary App</h3>
-<p>进入APP，依次安照初始化步骤，同意条款→配置VPN→安装根证书→移动证书到系统CA列表（如无ROOT权限，可以选择右上角的跳过）<br>
-注：在「安装根证书」步骤中，可能会弹出Android系统自带的「为证书命名」窗口，在凭据用途中请选择「VPN和应用」（即默认选项），如图（示例为Android 10 原生ROM）。<br>
-<img src="https://youyou475.github.io/post-images/1628520147987.png" alt="" loading="lazy"><br>
-<strong>请注意：如您使用Android 11设备，在安装证书时会提示必须在“设置”中安装CA证书，建议使用Android 11以下的设备或参考文末附录解决方法。</strong><br>
-若一切正常，即可进入首页界面，准备后续的抓包操作。</p>
-<h2 id="3开始抓包">3.开始抓包</h2>
-<p><em>在开始之前，建议将不必要的应用移出后台，避免收集到不必要的抓包数据。</em><br>
-①打开HttpCanary App进入首页，点击右下角按钮，开始抓包（可以通过是否有悬浮窗来判断是否已经成功开始抓包）。<br>
-<img src="https://youyou475.github.io/post-images/1628520316165.png" alt="" loading="lazy"><br>
-②打开ClassIn App，选择需要的课程，点击「回放观看」按钮。<br>
-<img src="https://youyou475.github.io/post-images/1628520334686.png" alt="" loading="lazy"><br>
-③观看5-10秒时间，然后退出ClassIn App，重新进入HttpCanary App，再次点击右下角按钮，停止抓包。<br>
-<img src="https://youyou475.github.io/post-images/1628520359500.png" alt="" loading="lazy"><br>
-④分析抓包数据，观察记录里GET记录，可以发现有https://playback.eeo.cn/开头的链接，此即为课程回放直链，点击它查看详细内容。<br>
-<img src="https://youyou475.github.io/post-images/1628520394569.png" alt="" loading="lazy"><br>
-⑤点击该URL，即可复制到剪贴板了。<br>
-<img src="https://youyou475.github.io/post-images/1628520427227.png" alt="" loading="lazy"><br>
-⑥在浏览器中打开测试，成功。<br>
-<img src="https://youyou475.github.io/post-images/1628520451056.jpg" alt="" loading="lazy"></p>
-<h1 id="四-原理总结">四、原理总结</h1>
-<p>本方法是通过HttpCanary利用VPN代理抓取ClassIn客户端的数据包后进一步分析得到。<br>
-相比之下，本方法步骤简单，技术含量较少，利于“小白化”操作。<br>
-同时也在研究其它方法实现其目的。</p>
-<h1 id="五-文末附录">五、文末附录</h1>
-<h2 id="1classin-api">1.ClassIn API</h2>
-<p>ClassIn官方提供使用「GitBook」发布的API，可供技术人员参考。<br>
-<img src="https://youyou475.github.io/post-images/1628520643069.jpg" alt="" loading="lazy"><br>
-详细请<a href="http://www.eeo.cn/partner/api_manage/classin_api_book/zh-hans/">点击本链接</a>。</p>
-<h2 id="2httpcanary-android-11-安装证书问题">2.HttpCanary Android 11 安装证书问题</h2>
-<p>由于Android 11收紧了APP安装「CA证书」的权限，只能用户手动安装，因此导致了用户无法正常使用HttpCanary。<br>
-<img src="https://youyou475.github.io/post-images/1628520574011.jpg" alt="" loading="lazy"><br>
-具体解决方法，请参见酷安大佬“蓝瓦”所写的教程<a href="https://www.coolapk.com/feed/22762279?shareKey=MjM5MDA2NThiMmRiNjExMGVkYjk~&amp;shareUid=670404&amp;shareFrom=com.coolapk.market_11.2.2">点击链接</a>。<br>
-但是操作较为复杂，建议更换Android 11以下的设备进行抓包操作。</p>
-
+        
       </div>
     </article>
   
